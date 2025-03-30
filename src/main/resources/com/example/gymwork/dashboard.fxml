@@ -1,14 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
-
-</AnchorPane>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="685.0" prefWidth="1173.0" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.example.gymwork.Dashboard" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="157.0" prefWidth="1173.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="81.0" prefWidth="342.0" text="Welcome, ">
+               <padding>
+                  <Insets left="200.0" />
+               </padding>
+               <font>
+                  <Font name="Impact" size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="81.0" prefWidth="342.0">
+               <padding>
+                  <Insets left="200.0" />
+               </padding>
+               <font>
+                  <Font name="Impact" size="31.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="154.0" prefWidth="1173.0">
+         <children>
+            <ChoiceBox fx:id="memberChoiceBox" prefWidth="150.0">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </ChoiceBox>
+            <ListView fx:id="memberListview" prefHeight="153.0" prefWidth="803.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="54.0" prefWidth="1173.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#memberDoWorkout" text="Do" />
+            <Button mnemonicParsing="false" onAction="#memberBlockWorkout" text="Block">
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets bottom="70.0" />
+         </VBox.margin></HBox>
+      <HBox alignment="CENTER" prefHeight="154.0" prefWidth="1173.0">
+         <children>
+            <TextArea fx:id="memberChosenWorkout" prefHeight="125.0" prefWidth="535.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#onSetLogout" text="Logout" />
+         </children>
+         <VBox.margin>
+            <Insets right="80.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</VBox>
